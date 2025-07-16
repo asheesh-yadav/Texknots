@@ -76,10 +76,14 @@ html,body{
     align-items: center;
     justify-content: flex-end;
     font-size: 26px;
-    
   }
   .header-container {
     padding: 12px 10px;
+  }
+  
+  /* Add this to match padding */
+  .nav-links.mobile-nav {
+    padding: 0 10px;
   }
 }
 
@@ -87,11 +91,15 @@ html,body{
 .nav-links.mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end; /* Change from center to flex-end */
   gap: 18px;
   margin-top: 10px;
   margin-bottom: 10px;
   animation: fadeInDown 0.2s;
+  max-width: 1200px; /* Add this */
+  margin-left: auto; /* Add this */
+  margin-right: auto; /* Add this */
+  padding: 0 20px; /* Add this to match header-container padding */
 }
 
 .nav-links.mobile-nav a {
@@ -100,8 +108,8 @@ html,body{
   font-size: 18px;
   font-weight: 400;
   padding: 6px 0;
-  width: 100%;
-  text-align: center;
+  width: auto; /* Change from 100% to auto */
+  text-align: right; /* Change from center to right */
   transition: color 0.2s;
 }
 
@@ -926,7 +934,7 @@ justify-content: center
 /* ===================== Responsive Enhancements ===================== */
 
 @media (max-width: 900px) {
-  .header-container,
+  
   .hero-container,
   .craftsmanship-container,
   .design-limits-container,
@@ -994,7 +1002,7 @@ justify-content: center
     padding: 10px 0 !important;
   }
   .header-container {
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 10px !important;
     padding: 10px 0 !important;
   }
