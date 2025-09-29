@@ -39,7 +39,7 @@ Always tuned into what’s next, they regularly present our latest collections�
           />
         </div>
         <div className="hero-text">
-          <p>
+          <p style={{maxWidth:"465px"}}>
             “Texknots is built on trust, passion, and craftsmanship. I believe in empowering my team to
             create with freedom and excellence—because when people thrive, great things happen.”
           </p>

@@ -2,7 +2,7 @@ html,body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   font-family: "Poppins", Arial, Helvetica, sans-serif !important;
+     font-family: 'Roboto' !important;
 }
 
 
@@ -44,8 +44,8 @@ html,body{
 .nav-links.desktop-nav a {
   color: #111;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
+     font-size: 14px;
+    font-weight: 300;
   transition: color 0.2s;
 }
 
@@ -159,6 +159,9 @@ html,body{
   color: #555;
   font-size: 18px;
   line-height: 1.6;
+  font-weight: 200;
+    font-family: 'Roboto' !important;
+    text-align: center;
 }
 
 .hero-text .founder {
@@ -180,12 +183,13 @@ html,body{
   justify-content: center;
   max-width: 1200px;
   margin: auto;
-  gap: 60px;
+  gap: 175px;
 }
 
 .craftsmanship-text {
   flex: 1;
   min-width: 320px;
+      margin-left: 140px;
 }
 
 .craftsmanship-text h2 {
@@ -197,11 +201,13 @@ html,body{
 }
 
 .craftsmanship-text p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 200;
+    max-width: 500px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
 }
 
 .craftsmanship-image img {
@@ -213,9 +219,9 @@ html,body{
 }
 
 .headingg{
-    font-size: 45px !important;
+    font-size: 37px !important;
     margin-bottom: 60px;
-    font-weight: 400;
+    font-weight: 200;
 }
 .para{
      font-size: 25px !important;
@@ -248,12 +254,13 @@ html,body{
   max-width: 1200px;
   margin: auto;
   position: relative;
+      margin-left: 20%;
 }
 
 .design-limits-image {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 500px;
+     max-width: 545px;
 }
 
 .design-limits-image img {
@@ -270,23 +277,26 @@ html,body{
   max-width: 500px;
   flex: 1;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 33%;
   z-index: 2;
 }
 
 .design-limits-text h2 {
-  font-size: 36px;
-  font-weight: 300;
+     font-size: 38px;
+    font-weight: 100;
   margin-bottom: 20px;
   color: #222;
 }
 
 .design-limits-text p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+   
+    font-weight: 200;
+    max-width: 320px;
+
 }
 
 .design-limits-text ul {
@@ -296,9 +306,10 @@ html,body{
 }
 
 .design-limits-text li {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 200;
 }
 
 /* Tablet styles */
@@ -367,15 +378,18 @@ html,body{
   font-weight: 200;
       margin-top: 100px;
     margin-bottom: 60px;
+    font-weight: 100;
 }
 
 .team-description {
-  font-size: 16px;
-  color: #555;
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 60px;
-  line-height: 1.7;
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 60px;
+    line-height: 1.7;
+    font-weight: 200;
+    max-width: 645px;
 }
 
 .team-cards {
@@ -428,7 +442,7 @@ html,body{
 
 .showcase-title {
   font-size: 37px;
-  font-weight: 200;
+  font-weight: 100;
   color: #222;
   margin-bottom: 16px;
 }
@@ -446,7 +460,8 @@ html,body{
   color: #555;
   font-weight: 300;
   line-height: 1.6;
-  font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+font-weight: 100;
+margin-bottom: 80px;
 }
 
 
@@ -559,11 +574,12 @@ html,body{
   text-align: center;
   padding: 80px 20px;
   background-color: #fff;
+  margin-top: 80px;
 }
 
 .section-title {
   font-size: 42px;
-  font-weight: 300;
+  font-weight: 100;
   color: #222;
   margin-bottom: 10px;
 }
@@ -594,7 +610,7 @@ html,body{
 
 .section-title {
   font-size: 42px;
-  font-weight: 200;
+  font-weight: 100;
   color: #222;
   margin-bottom: 10px;
 }
@@ -631,7 +647,7 @@ html,body{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; /* Changed from space-between to flex-start */
-  align-items: center;
+  align-items: start;
   gap: 60px; /* Increased gap for better spacing */
 }
 
@@ -654,12 +670,12 @@ html,body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Changed from center to flex-start */
+     align-items: center;
   gap: 30px;
 }
 
 .text-block h5 {
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 200;
   margin-bottom: 10px;
   color: #444;
@@ -712,7 +728,7 @@ html,body{
   grid-template-columns: 1fr 0.8fr;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
-  min-width: 500px;
+  width: auto;
   min-height: 600px;
   flex-shrink: 0;
 }
@@ -833,11 +849,13 @@ html,body{
   flex: 1;
   min-width: 280px;
   margin-right: 40px;
+  font-weight: 100 !important;
 }
 
 .contact-info h2 {
-  font-size: 32px;
+  font-size: 42px;
   margin-bottom: 30px;
+    font-weight: 100 !important;
 }
 
 .contact-block {
@@ -908,7 +926,9 @@ display: flex;
 justify-content: center
 }
 
-
+strong{
+      font-weight: 100;
+}
 
 /* Map */
 .map-div{
@@ -1103,9 +1123,9 @@ justify-content: center
   }
   .design-limits-text,
   .craftsmanship-text {
-    max-width: 100% !important;
-    padding: 0 10px !important;
+    max-width:475px;
     text-align: center !important;
+    margin-left: 121px;
   }
   .innovation-container {
     padding: 30px 5px !important;
