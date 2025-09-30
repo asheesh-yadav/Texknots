@@ -13,7 +13,7 @@ const Header = () => {
         <div className="logo">
           <a href="/">
             <img
-              src="https://static.wixstatic.com/media/9e0242_59f3467c2dd4433699d746ceb8fb5192~mv2.png/v1/fill/w_240,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20texknots.png"
+              src="./img/lg.png"
               alt="Texknots Logo"
               width="240"
               height="90"
