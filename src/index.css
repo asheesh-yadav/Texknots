@@ -233,7 +233,10 @@ html,body{
     flex-direction: column;
     text-align: center;
   }
+.craftsmanship-text {
 
+      margin-left: 0px;
+}
   .craftsmanship-image img {
     width: 100%;
     max-width: 426px;
@@ -609,10 +612,12 @@ margin-bottom: 80px;
 }
 
 .section-title {
-  font-size: 42px;
+  font-size: 37px;
   font-weight: 100;
   color: #222;
-  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.35em;
+  margin-bottom: 22px;
 }
 
 .divider {
@@ -623,12 +628,15 @@ margin-bottom: 80px;
 }
 
 .section-description {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 200;
   color: #444;
   line-height: 1.6;
   max-width: 900px;
   margin: 0 auto;
+  max-width: 811px;
+  line-height: 2rem;
+    font-family: 'roboto' !important;
 }
 
 
@@ -676,13 +684,14 @@ margin-bottom: 80px;
 
 .text-block h5 {
   font-size: 23px;
-  font-weight: 200;
+  font-weight: 100;
   margin-bottom: 10px;
   color: #444;
 }
 
 .text-block p {
-  font-weight: 200;
+  font-weight: 100;
+  font-size: 18px;
 }
 
 /* Responsive adjustments */
@@ -791,10 +800,9 @@ margin-bottom: 80px;
 }
 
 .export-title {
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  font-weight: 200;
+  font-size: 37px;
+  font-weight: 100 !important;
+  margin-bottom: 20px;
 }
 
 .underline {
@@ -808,6 +816,8 @@ margin-bottom: 80px;
   font-size: 18px;
   color: #555;
   margin-bottom: 40px;
+  margin-top: 15px;
+  font-weight: 200 !important;
 }
 
 .export-map-container {
@@ -818,14 +828,15 @@ margin-bottom: 80px;
 .export-stats {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: -60px;
+  font-weight: 400;
   background: rgba(232, 232, 232, 0.817);
   padding: 20px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.8;
   text-align: left;
   padding: 0px 25px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .world-map {
@@ -1107,6 +1118,9 @@ strong{
   .factory-section {
     padding: 40px 10px !important;
   }
+  .design-limits-container{
+    margin-left: 0%;
+  }
   .design-limits-container,
   .craftsmanship-container,
   .innovation-block {
@@ -1119,13 +1133,13 @@ strong{
     width: 100% !important;
     max-width: 350px !important;
     height: auto !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 0px !important;
   }
   .design-limits-text,
   .craftsmanship-text {
     max-width:475px;
     text-align: center !important;
-    margin-left: 121px;
+    margin-left: 5px;
   }
   .innovation-container {
     padding: 30px 5px !important;
@@ -1316,3 +1330,20 @@ html, body, #root {
     margin-top: 40px;
   }
 }
+
+.team-card p {
+    font-size: 18px !important;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 200 !important;
+}
+.team-card .para {
+    font-size: 22px !important;
+    font-weight: 200 !important;
+}
+.showcase-description {
+    font-size: 18px !important;
+    font-weight: 200 !important;
+ 
+}
+
