@@ -189,7 +189,8 @@ html,body{
 .craftsmanship-text {
   flex: 1;
   min-width: 320px;
-      margin-left: 140px;
+      margin-left: 130px;
+      padding-top: 70px;
 }
 
 .craftsmanship-text h2 {
@@ -208,7 +209,8 @@ html,body{
     max-width: 500px;
     font-family: 'Roboto', sans-serif;
     margin-top: 60px;
-        letter-spacing: 0.01em !important;
+        letter-spacing: 0.02em !important;
+            line-height: 1.8em;
 }
 
 .craftsmanship-image img {
@@ -378,22 +380,22 @@ html,body{
 }
 
 .team-heading {
-  font-size: 36px;
-  font-weight: 200;
+  font-size: 37px;
+  font-weight: 100;
       margin-top: 100px;
     margin-bottom: 60px;
-    font-weight: 100;
 }
 
 .team-description {
     font-size: 18px;
     color: #555;
-    max-width: 800px;
     margin: auto;
     margin-bottom: 60px;
-    line-height: 1.7;
+    line-height: 1.9;
     font-weight: 200;
-    max-width: 645px;
+        letter-spacing: 0.01em;
+    max-width: 675px;
+    margin-top: 30px;
 }
 
 .team-cards {
@@ -425,10 +427,11 @@ html,body{
 }
 
 .team-card p {
-  font-size: 14px;
+  font-size: 18px;
   color: #555;
   line-height: 1.6;
-      letter-spacing: 0.01em !important;
+      letter-spacing: 0.02em !important;
+      font-weight: 200;
 }
 
 
@@ -442,7 +445,7 @@ html,body{
 
 .showcase-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 145px auto;
 }
 
 .showcase-title {
@@ -464,7 +467,7 @@ html,body{
   font-size: 20px;
   color: #555;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
 font-weight: 100;
 margin-bottom: 80px;
     letter-spacing: 0.01em !important;
@@ -578,7 +581,7 @@ margin-bottom: 80px;
 /* Factory section */
 .factory-section {
   text-align: center;
-  padding: 80px 20px;
+  padding: 160px 20px;
   background-color: #fff;
   margin-top: 80px;
 }
@@ -611,8 +614,9 @@ margin-bottom: 80px;
 /* factory section */
 .factory-section {
   text-align: center;
-  padding: 80px 20px;
+  padding: 15px 20px;
   background-color: #fff;
+  margin-bottom: 121px;
 }
 
 .section-title {
@@ -698,6 +702,7 @@ margin-bottom: 80px;
   font-weight: 200;
   font-size: 18px;
   letter-spacing: 0.01em !important;
+      line-height: 1.7;
 }
 
 /* Responsive adjustments */
@@ -1338,12 +1343,7 @@ html, body, #root {
   }
 }
 
-.team-card p {
-    font-size: 18px !important;
-    color: #555;
-    line-height: 1.6;
-    font-weight: 200 !important;
-}
+
 .team-card .para {
     font-size: 22px !important;
     font-weight: 200 !important;
