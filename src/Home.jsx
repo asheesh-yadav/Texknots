@@ -115,7 +115,7 @@ Always tuned into whatâ€™s next, they regularly present our latest collectionsâ€
         {teamData.map((team, index) => (
           <div className="team-card" key={index}>
             <img src={team.img} alt={team.title} />
-            <div style={{padding:"50px"}}>
+            <div style={{padding:"30px"}}>
             <p className='para'>{team.title}</p>
             <p>{team.description}</p>
             </div>
@@ -177,7 +177,7 @@ Always tuned into whatâ€™s next, they regularly present our latest collectionsâ€
       </div>
 
       <div className="innovation-block">
-        <div className="image-block">
+        <div className="image-block1">
           <img
             src="https://static.wixstatic.com/media/9e0242_3448d1c550a44139aee0280b69ef1193~mv2.jpg/v1/fill/w_948,h_720,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9e0242_3448d1c550a44139aee0280b69ef1193~mv2.jpg"
             alt="Worker Using Juki Machine"
@@ -201,7 +201,7 @@ Always tuned into whatâ€™s next, they regularly present our latest collectionsâ€
 
 
         <div className="innovation-block">
-        <div className="image-block">
+        <div className="image-block2">
           <img
             src="https://static.wixstatic.com/media/9e0242_9a6bb947eb6648b183f5cbb4b43e9e92~mv2.jpg/v1/fill/w_948,h_983,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9e0242_9a6bb947eb6648b183f5cbb4b43e9e92~mv2.jpg"
             alt="Worker Using Juki Machine"
@@ -241,10 +241,8 @@ Always tuned into whatâ€™s next, they regularly present our latest collectionsâ€
       </div>
     </section>
     <Shipped/>
-    <Export/>
-    <div className='Contact-div'>
+    <Export/>  
     <Contact/>
-    </div>
 
     {/* map */}
     <div className="maP">
@@ -267,7 +265,7 @@ Always tuned into whatâ€™s next, they regularly present our latest collectionsâ€
     </div>
     </div>
 </div>
-    </div>
+</div>
   )
 }
 

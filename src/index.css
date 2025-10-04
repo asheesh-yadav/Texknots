@@ -16,9 +16,10 @@ html,body{
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 40px 20px;
+  padding-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +45,7 @@ html,body{
 .nav-links.desktop-nav a {
   color: #111;
   text-decoration: none;
-     font-size: 15px;
+     font-size: 14px;
     font-weight: 300;
   transition: color 0.2s;
 }
@@ -179,18 +180,17 @@ html,body{
 .craftsmanship-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  margin-top: 60px;
   justify-content: center;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1345px;
   gap: 175px;
 }
 
 .craftsmanship-text {
   flex: 1;
   min-width: 330px;
-      margin-left: 115px;
-      padding-top: 70px;
+      margin-left: 185px;
+      padding-top: 25px;
 }
 
 .craftsmanship-text h2 {
@@ -246,63 +246,57 @@ html,body{
     height: auto;
   }
 }
-/* --------------------- */
 .design-limits-section {
   background-color: #fff;
-  padding: 80px 20px;
+      margin-top: 30px;
 }
 
 .design-limits-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 1200px;
-  margin: auto;
   position: relative;
-      margin-left: 20%;
+  margin-left: 16%;
 }
 
+
 .design-limits-image {
-  flex: 0 0 auto;
-  width: 100%;
-     max-width: 545px;
+  width: 500px;
+  height: 640px;
+  overflow: hidden; /* ensures clean crop if image overflows */
 }
 
 .design-limits-image img {
   width: 100%;
-  height: auto;
-  min-height: 400px;
-  object-fit: cover;
-  border-radius: 4px;
+  height: 100%;
+  object-fit: cover; /* keeps proportions while filling */
+  display: block;
 }
 
 .design-limits-text {
   background-color: #f7f7f7;
   padding: 60px 40px;
-  max-width: 500px;
+    min-width: 500px;
+        max-height: 580px;
   flex: 1;
   position: absolute;
-  top: 10%;
-  left: 33%;
+top: 20%;
+    left: 35%;
   z-index: 2;
 }
 
 .design-limits-text h2 {
-     font-size: 38px;
-    font-weight: 100;
+  font-size: 38px;
+  font-weight: 100;
   margin-bottom: 20px;
   color: #222;
+      padding-left: 15px;
 }
 
 .design-limits-text p {
-    font-size: 20px;
-    color: #555;
-    line-height: 1.6;
-   
-    font-weight: 200;
-    max-width: 320px;
-
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 200;
+  max-width: 320px;
+      padding-left: 15px;
 }
 
 .design-limits-text ul {
@@ -312,11 +306,12 @@ html,body{
 }
 
 .design-limits-text li {
-    font-size: 20px;
-    color: #555;
-    line-height: 1.6;
-    font-weight: 200;
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 200;
 }
+
 
 /* Tablet styles */
 @media (max-width: 600px) {
@@ -382,7 +377,7 @@ html,body{
 .team-heading {
   font-size: 37px;
   font-weight: 100;
-      margin-top: 100px;
+      margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -402,7 +397,7 @@ html,body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+      gap: 62px;
 }
 
 .team-card {
@@ -496,6 +491,9 @@ margin-bottom: 80px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 0 40px;
+      width: 990px !important;
+    height: 351px !important;
+    overflow-y: hidden;
 }
 
 .slider-container::-webkit-scrollbar {
@@ -505,8 +503,6 @@ margin-bottom: 80px;
 .slider-item {
   position: relative;
   flex: 0 0 auto;
-  width: 260px;
-  height: 315px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -581,9 +577,9 @@ margin-bottom: 80px;
 /* Factory section */
 .factory-section {
   text-align: center;
-  padding: 160px 20px;
+  padding: 130px 20px;
   background-color: #fff;
-  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .section-title {
@@ -612,12 +608,12 @@ margin-bottom: 80px;
 
 
 /* factory section */
-.factory-section {
+/* .factory-section {
   text-align: center;
   padding: 15px 20px;
   background-color: #fff;
   margin-bottom: 121px;
-}
+} */
 
 .section-title {
   font-size: 37px;
@@ -655,8 +651,6 @@ margin-bottom: 80px;
   gap: 80px;
   padding: 60px 40px;
   background-color: #fff;
-  max-width: 1200px; /* Add max-width to prevent over-stretching */
-  margin: 0 auto; /* Center the container */
 }
 
 .innovation-block {
@@ -668,13 +662,29 @@ margin-bottom: 80px;
 }
 
 .image-block {
-  flex: 0 0 500px; /* Fixed width instead of percentage */
+width: 632px;
+    height: 739px;
+    /* padding-left: 25px; */
+    margin-left: 30px;
+  text-align: center;
+}
+.image-block1 {
+    width: 632px;
+    height: 480px;
+    /* padding-left: 25px; */
+    margin-left: 30px;
+  text-align: center;
+}
+.image-block2 {
+width: 632px;
+    height: 655px;
+    /* padding-left: 25px; */
+    margin-left: 30px;
   text-align: center;
 }
 
 .block-image {
   width: 100%;
-  max-width: 500px; /* Match the flex-basis */
 }
 
 .text-block {
@@ -814,6 +824,7 @@ margin-bottom: 80px;
   font-size: 37px;
   font-weight: 100 !important;
   margin-bottom: 20px;
+      margin-top: 40px;
 }
 .underline {
     width: 32px;
@@ -859,22 +870,20 @@ margin-bottom: 80px;
 /* Contact */
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   padding: 60px;
-  background-color: #9c95950a;
   flex-wrap: wrap;
-
+      gap: 200px;
 }
 
 .contact-info {
-  flex: 1;
   min-width: 280px;
   margin-right: 40px;
   font-weight: 100 !important;
 }
 
 .contact-info h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 30px;
     font-weight: 100 !important;
 }
@@ -883,32 +892,35 @@ margin-bottom: 80px;
   margin-bottom: 30px;
   line-height: 1.8;
   color: #333;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .contact-form {
-  flex: 1.2;
   min-width: 300px;
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
+  max-width: 470px;
+      min-width: 450px !important;
 }
 
 .contact-form label {
-  margin: 12px 0 6px;
-  font-size: 14px;
-  color: #333;
+    margin: 8px 0 1px;
+    font-size: 14px;
+    color: #333333e6;
+    font-weight: 400;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
-  font-size: 15px;
-  border: 1px solid #444;
-  outline: none;
-  width: 100%;
+    padding: 15px 0 15px 3px;
+    font-size: 14px;
+    border: 1px solid #444;
+    outline: none;
+    width: 100%;
+    color: black;
 }
 
 .contact-form textarea {
@@ -931,7 +943,7 @@ margin-bottom: 80px;
 .contact-form button {
   margin-top: 20px;
   align-self: flex-end;
-  padding: 10px 30px;
+  padding: 10px 40px;
   background-color: black;
   color: white;
   border: none;
@@ -1015,6 +1027,7 @@ strong{
     flex-direction: column !important;
     padding: 30px 10px !important;
     gap: 30px !important;
+    background-color: none !important;
   }
   .contact-info,
   .contact-form {

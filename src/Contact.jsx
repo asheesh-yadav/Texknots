@@ -2,7 +2,6 @@ import React from 'react';
 
 const Contact = () => {
   return (
-        <div className='Contact-div'>
     <div className="contact-container">
       {/* Left Column: Contact Info */}
       <div className="contact-info" style={{fontWeight:"200"}}>
@@ -65,7 +64,6 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
     </div>
   );
 };
