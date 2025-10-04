@@ -492,8 +492,9 @@ margin-bottom: 80px;
   scroll-behavior: smooth;
   padding: 0 40px;
       width: 990px !important;
-    height: 351px !important;
+    height: 307px !important;
     overflow-y: hidden;
+    
 }
 
 .slider-container::-webkit-scrollbar {
