@@ -87,7 +87,9 @@ const [likedImages, setLikedImages] = useState({});
   />
   <div className="overlay">
     <span
-      className="d-inline-flex align-items-center"
+      className="d-inline-flex align-items-center" style={{position: "absolute",
+    top: "85%",
+    left: "15%"}}
       onClick={(e) => {
         e.stopPropagation();
         const key = `large-${index}`;
@@ -131,7 +133,9 @@ const [likedImages, setLikedImages] = useState({});
         />
         <div className="overlay">
           <span
-            className="d-inline-flex align-items-center"
+            className="d-inline-flex align-items-center" style={{position: "absolute",
+    top: "85%",
+    left: "15%"}}
             onClick={(e) => {
               e.stopPropagation();
               setLikedImages((prev) => ({

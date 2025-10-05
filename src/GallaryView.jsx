@@ -4,24 +4,54 @@ import "./View.css";
 import  { useRef} from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import img1 from "./img/img1.png";
-import img2 from "./img/img2.png";
-import img3 from "./img/img3.png";
-import img4 from "./img/img4.png";
-import img5 from "./img/img5.png";
-import img6 from "./img/img6.png";
-import img7 from "./img/img7.png";
-import img8 from "./img/img8.png";
-import img9 from "./img/img9.png";
-import img10 from "./img/img10.png";
-import img11 from "./img/img11.jpg";
-import img12 from "./img/img12.jpg";
+import a1 from "./img/a1.jpg";
+import a2 from "./img/a2.jpg";
+import a3 from "./img/a3.jpg";
+import a4 from "./img/a4.jpg";
+import a5 from "./img/a5.jpg";
+import a6 from "./img/a6.jpg";
+import a7 from "./img/a7.jpg";
+import a8 from "./img/a8.png";
+import a9 from "./img/a9.png";
+import a11 from "./img/a11.png";
+import a12 from "./img/a12.png";
+import a13 from "./img/a13.jpg";
+import a14 from "./img/a14.jpg";
+import a15 from "./img/a15.jpg";
+import a16 from "./img/a16.jpg";
+import a17 from "./img/a17.jpg";
+import a18 from "./img/a18.jpg";
+import a20 from "./img/a20.jpg";
+import a21 from "./img/a21.jpg";
+import a22 from "./img/a22.jpg";
+import a23 from "./img/a23.jpg";
+import a24 from "./img/a24.jpg";
+import a25 from "./img/a25.jpg";
+import a26 from "./img/a26.jpg";
+import a27 from "./img/a27.jpg";
+import a28 from "./img/a28.jpg";
+import a29 from "./img/a29.jpg";
+import a30 from "./img/a30.jpg";
+import a33 from "./img/a33.jpg";
+import a34 from "./img/a34.jpg";
+import a35 from "./img/a35.png";
 
 const images = [
-  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12
+  { large: a1, smalls: [a2, a3] },
+  { large: a4, smalls: [a5, a6] },
+  { large: a7, smalls: [a8, a9] },
+  { large: a13, smalls: [a14, a15] },
+  { large: a16, smalls: [a17, a18] },
+  { large: a12, smalls: [a20, a21] },
+  { large: a22, smalls: [a23, a24] },
+  { large: a25, smalls: [a26, a27] },
+  { large: a28, smalls: [a29, a30] },
+  { large: a11, smalls: [a11, a33] },
+  { large: a34, smalls: [a35, a1] }, 
 ];
 
-function View() {
+
+function GallaryView() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(parseInt(id));
@@ -103,4 +133,4 @@ function View() {
   );
 }
 
-export default View;
+export default GallaryView;
