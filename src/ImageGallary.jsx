@@ -81,7 +81,7 @@ const [likedImages, setLikedImages] = useState({});
           <div className="grid-group" key={index}>
         <div className="large-img">
   <img
-    style={{ maxHeight: "500px", width: "100%", objectFit: "cover" }}
+    style={{ maxHeight: "500px", width: "100%", marginLeft:index === 2 ? "5px" : "0px", objectFit: "cover" }}
     src={group.large}
     alt={`Large ${index + 1}`}
   />
