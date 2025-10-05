@@ -122,7 +122,7 @@ const [likedImages, setLikedImages] = useState({});
     return (
       <div className="small-img" key={key}>
         <img
-          style={{ maxWidth: "200px", maxHeight: "190px", objectFit: "cover" }}
+          style={{ maxWidth: "400px", maxHeight: "190px", objectFit: "cover" }}
           src={img}
           alt={`Small ${index + 1}-${i + 1}`}
         />
