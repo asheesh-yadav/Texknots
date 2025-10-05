@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./View.css";
 import  { useRef} from "react";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import img1 from "./img/img1.png";
@@ -80,17 +82,29 @@ function View() {
 
         {/* Top Right */}
         <div className="viewer-icons top-right">
-          <span title="Close" onClick={() => navigate(-1)}>✕</span>
+          <span
+      title="Close"
+      onClick={() => navigate(-1)}
+      style={{
+        cursor: "pointer",
+        fontSize: "40px",
+        fontWeight: "100",
+        position: "absolute",
+        top: "5px",
+        right: "5px",
+        color: "#000",
+      }}
+    >✕</span>
         </div>
 
         {/* Arrows */}
-        <div className="viewer-arrow left" onClick={prevImage}>❮</div>
+        <div className="viewer-arrow left" onClick={prevImage} >    <ArrowBackIosNewIcon fontSize="inherit" /></div>
 
         <div className="viewer-image">
           <img src={images[currentIndex]} alt={`img-${currentIndex}`} />
         </div>
 
-        <div className="viewer-arrow right" onClick={nextImage}>❯</div>
+        <div className="viewer-arrow right" onClick={nextImage}>   <ArrowForwardIosIcon fontSize="inherit" /></div>
       </div>
 
       {/* Zoom Overlay */}

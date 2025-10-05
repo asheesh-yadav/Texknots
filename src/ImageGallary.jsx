@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import  {  useState } from "react";
+import React, { useRef, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import a1 from "./img/a1.jpg";
 import a2 from "./img/a2.jpg";
@@ -32,6 +31,7 @@ import a30 from "./img/a30.jpg";
 import a33 from "./img/a33.jpg";
 import a34 from "./img/a34.jpg";
 import a35 from "./img/a35.png";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   { large: a1, smalls: [a2, a3] },
@@ -44,22 +44,13 @@ const images = [
   { large: a25, smalls: [a26, a27] },
   { large: a28, smalls: [a29, a30] },
   { large: a11, smalls: [a11, a33] },
-  { large: a34, smalls: [a35, a1] }, 
+  { large: a34, smalls: [a35, a1] },
 ];
 
 const ImageGallery = () => {
   const scrollRef = useRef(null);
-  const [liked, setLiked] = useState(false);
-const [likedImages, setLikedImages] = useState({});
-
-  const heartStyle = {
-    cursor: "pointer",
-    fontSize: "16px",
-    color: liked ? "red" : "white",
-    marginLeft: "8px",
-    transition: "color 0.3s ease",
-  };
-
+  const [likedImages, setLikedImages] = useState({});
+  const navigate = useNavigate();
   const handleScroll = (direction) => {
     const container = scrollRef.current;
     if (!container) return;
@@ -77,94 +68,135 @@ const [likedImages, setLikedImages] = useState({});
       </button>
 
       <div className="grid-scroll" ref={scrollRef}>
-        {images.map((group, index) => (
-          <div className="grid-group" key={index}>
-        <div className="large-img">
-  <img
-    style={{ maxHeight: "500px", width: "100%", marginLeft:index === 2 ? "5px" : "0px", objectFit: "cover" }}
-    src={group.large}
-    alt={`Large ${index + 1}`}
-  />
-  <div className="overlay">
-    <span
-      className="d-inline-flex align-items-center" style={{position: "absolute",
-    top: "85%",
-    left: "15%"}}
-      onClick={(e) => {
-        e.stopPropagation();
-        const key = `large-${index}`;
-        setLikedImages((prev) => ({
-          ...prev,
-          [key]: !prev[key],
-        }));
-      }}
-    >
-      <i
-        className={`bi ${likedImages[`large-${index}`] ? "bi-heart-fill" : "bi-heart"}`}
-        style={{
-          cursor: "pointer",
-          fontSize: "16px",
-          color: likedImages[`large-${index}`] ? "red" : "white",
-          marginLeft: "8px",
-          transition: "color 0.3s ease",
-        }}
-      ></i>
-    </span>
-  </div>
-</div>
+        {images.map((group, index) => {
+          const largeKey = `large-${index}`;
+          return (
+            <div className="grid-group" key={index}>
+              {/* Large Image */}
+              <div className="large-img">
+                <img
+                  style={{
+                    maxHeight: "500px",
+                    width: "100%",
+                    marginLeft:
+                      index === 2 ||
+                      index === 4 ||
+                      index === 5 ||
+                      index === 6 ||
+                      index === 7 ||
+                      index === 8 ||
+                      index === 9 ||
+                      index === 10
+                        ? "5px"
+                        : "0px",
+                    objectFit: "cover",
+                  }}
+                  src={group.large}
+                  alt={`Large ${index + 1}`}
+                    onClick={() => navigate(`/image/${index}`)}
+                />
+                <div className="overlay">
+                  <span
+                    className="d-inline-flex align-items-center"
+                    style={{ position: "absolute", top: "85%", left: "15%" }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLikedImages((prev) => ({
+                        ...prev,
+                        [largeKey]: !prev[largeKey],
+                      }));
+                    }}
+                  >
+                    <i
+                      className={`bi ${
+                        likedImages[largeKey] ? "bi-heart-fill" : "bi-heart"
+                      }`}
+                      style={{
+                        cursor: "pointer",
+                        fontSize: "16px",
+                        color: likedImages[largeKey] ? "red" : "white",
+                        marginLeft: "8px",
+                        transition: "color 0.3s ease",
+                      }}
+                    ></i>
+                    {likedImages[largeKey] && (
+                      <span
+                        style={{
+                          marginLeft: "14px",
+                          color: "white",
+                          fontSize: "14px",
+                          fontWeight: "300",
+                        }}
+                      >
+                        1
+                      </span>
+                    )}
+                  </span>
+                </div>
+              </div>
 
-
-   <div className="small-imgs">
-  {group.smalls.map((img, i) => {
-    const key = `${index}-${i}`;
-    // Conditional width
-    const maxWidth = index === 0 ? "252px" : "600px"; 
-
-    return (
-      <div className="small-img" key={key}>
-        <img
-          style={{
-            maxWidth: maxWidth,
-            maxHeight: "245px",
-            objectFit: "cover",
-          }}
-          src={img}
-          alt={`Small ${index + 1}-${i + 1}`}
-        />
-        <div className="overlay">
-          <span
-            className="d-inline-flex align-items-center" style={{position: "absolute",
-    top: "85%",
-    left: "15%"}}
-            onClick={(e) => {
-              e.stopPropagation();
-              setLikedImages((prev) => ({
-                ...prev,
-                [key]: !prev[key],
-              }));
-            }}
-          >
-            <i
-              className={`bi ${likedImages[key] ? "bi-heart-fill" : "bi-heart"}`}
-              style={{
-                cursor: "pointer",
-                fontSize: "16px",
-                color: likedImages[key] ? "red" : "white",
-                marginLeft: "8px",
-                transition: "color 0.3s ease",
-              }}
-            ></i>
-          </span>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
-
-
-          </div>
-        ))}
+              {/* Small Images */}
+              <div className="small-imgs">
+                {group.smalls.map((img, i) => {
+                  const smallKey = `${index}-${i}`;
+                  const maxWidth = index === 0 ? "255px" : "600px";
+                  return (
+                    <div className="small-img" key={smallKey}>
+                      <img
+                        style={{
+                          maxWidth: maxWidth,
+                          maxHeight: "245px",
+                          objectFit: "cover",
+                        }}
+                        src={img}
+                        alt={`Small ${index + 1}-${i + 1}`}
+                        onClick={() => navigate(`/image/${index}`)}
+                      />
+                      <div className="overlay">
+                        <span
+                          className="d-inline-flex align-items-center"
+                          style={{ position: "absolute", top: "85%", left: "15%" }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setLikedImages((prev) => ({
+                              ...prev,
+                              [smallKey]: !prev[smallKey],
+                            }));
+                          }}
+                        >
+                          <i
+                            className={`bi ${
+                              likedImages[smallKey] ? "bi-heart-fill" : "bi-heart"
+                            }`}
+                            style={{
+                              cursor: "pointer",
+                              fontSize: "16px",
+                              color: likedImages[smallKey] ? "red" : "white",
+                              marginLeft: "8px",
+                              transition: "color 0.3s ease",
+                            }}
+                          ></i>
+                          {likedImages[smallKey] && (
+                            <span
+                              style={{
+                                marginLeft: "14px",
+                                color: "white",
+                                fontSize: "14px",
+                                fontWeight: "300",
+                              }}
+                            >
+                              1
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <button className="navv right" onClick={() => handleScroll("right")}>

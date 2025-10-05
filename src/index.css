@@ -789,8 +789,12 @@ width: 632px;
 .large-img:hover .overlay {
   opacity: 1;
 }
-.small-imgs:hover .overlay {
+.small-img:hover .overlay {
   opacity: 1;
+}
+
+.large-img, .small-img {
+  position: relative !important; /* Add this */
 }
 
 .overlay i {
@@ -817,7 +821,7 @@ width: 632px;
 .small-imgs {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 6px;
 }
 
 .small-imgs img {
@@ -831,11 +835,11 @@ width: 632px;
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  font-size: 30px;
+  font-size: 35px !important;
   cursor: pointer;
   z-index: 5;
   background-color: transparent;
-  color: #333;
+  color: #1a1818b1;
 }
 
 .navv.right {
@@ -1401,3 +1405,6 @@ html, body, #root {
  
 }
 
+.Close{
+  font-size: 20px !important;
+}
