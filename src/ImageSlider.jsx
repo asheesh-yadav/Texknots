@@ -1,16 +1,22 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import img1 from "./img/img1.png";
+import img2 from "./img/img2.png";
+import img3 from "./img/img3.png";
+import img4 from "./img/img4.png";
+import img5 from "./img/img5.png";
+import img6 from "./img/img6.png";
+import img7 from "./img/img7.png";
+import img8 from "./img/img8.png";
+import img9 from "./img/img9.png";
+import img10 from "./img/img10.png";
+import img11 from "./img/img11.jpg";
+import img12 from "./img/img12.jpg";
 
 const images = [
-  "https://static.wixstatic.com/media/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png/v1/fit/w_1260,h_223,q_90,enc_avif,quality_auto/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png",
-  "https://static.wixstatic.com/media/9e0242_00d41994bd5041668e29c1180fad12a2~mv2.jpg",
-  "https://static.wixstatic.com/media/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png/v1/fit/w_1260,h_223,q_90,enc_avif,quality_auto/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png",
-  "https://static.wixstatic.com/media/9e0242_11ce4d7ff67145669f863be1ef013858~mv2.jpg",
-  "https://static.wixstatic.com/media/9e0242_4c26d1baa4804057b0b4a655a7d56ca8~mv2.jpg",
-  "https://static.wixstatic.com/media/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png/v1/fit/w_1260,h_223,q_90,enc_avif,quality_auto/9e0242_8a7cc290eec8447b9513daa32e27d553~mv2.png",
- "https://static.wixstatic.com/media/9e0242_4c26d1baa4804057b0b4a655a7d56ca8~mv2.jpg",
- ]; 
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12
+];
 
 
 const ImageSlider = () => {

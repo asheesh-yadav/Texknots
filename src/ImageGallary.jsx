@@ -1,54 +1,50 @@
 import React, { useRef } from 'react';
 import  {  useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
+import a1 from "./img/a1.jpg";
+import a2 from "./img/a2.jpg";
+import a3 from "./img/a3.jpg";
+import a4 from "./img/a4.jpg";
+import a5 from "./img/a5.jpg";
+import a6 from "./img/a6.jpg";
+import a7 from "./img/a7.jpg";
+import a8 from "./img/a8.png";
+import a9 from "./img/a9.png";
+import a11 from "./img/a11.png";
+import a12 from "./img/a12.png";
+import a13 from "./img/a13.jpg";
+import a14 from "./img/a14.jpg";
+import a15 from "./img/a15.jpg";
+import a16 from "./img/a16.jpg";
+import a17 from "./img/a17.jpg";
+import a18 from "./img/a18.jpg";
+import a20 from "./img/a20.jpg";
+import a21 from "./img/a21.jpg";
+import a22 from "./img/a22.jpg";
+import a23 from "./img/a23.jpg";
+import a24 from "./img/a24.jpg";
+import a25 from "./img/a25.jpg";
+import a26 from "./img/a26.jpg";
+import a27 from "./img/a27.jpg";
+import a28 from "./img/a28.jpg";
+import a29 from "./img/a29.jpg";
+import a30 from "./img/a30.jpg";
+import a33 from "./img/a33.jpg";
+import a34 from "./img/a34.jpg";
+import a35 from "./img/a35.png";
 
 const images = [
-  {
-    large: 'https://static.wixstatic.com/media/9e0242_05518104d7cc4c8eb728b694a08b0297~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_05518104d7cc4c8eb728b694a08b0297~mv2.jpg',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_c37a0a5286a247e98c405b660fbe7b1b~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_c37a0a5286a247e98c405b660fbe7b1b~mv2.jpg',
-      'https://static.wixstatic.com/media/9e0242_5b074b4a4c1d43a4b9524899b438a789~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_5b074b4a4c1d43a4b9524899b438a789~mv2.jpg',
-    ]
-  },
-  {
-    large: 'https://static.wixstatic.com/media/9e0242_bceec95255f24d2fbf8bf245753b2248~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_bceec95255f24d2fbf8bf245753b2248~mv2.jpg',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_501d8a6df2c54407aead8f5cc70127ba~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_501d8a6df2c54407aead8f5cc70127ba~mv2.jpg',
-
-      'https://static.wixstatic.com/media/9e0242_5c80166004ad4cbc998e6d3dff8b0858~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_5c80166004ad4cbc998e6d3dff8b0858~mv2.jpg'
-    ]
-  },
-  {
-    large: 'https://static.wixstatic.com/media/9e0242_93a5a61d8b3242768f7bf576c6d400ac~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_93a5a61d8b3242768f7bf576c6d400ac~mv2.jpg',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_255b4547375547e7881e249940cf6eac~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_255b4547375547e7881e249940cf6eac~mv2.png',
-      'https://static.wixstatic.com/media/9e0242_4a9da30574554ca0b4582ea7ffc4190f~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_4a9da30574554ca0b4582ea7ffc4190f~mv2.png'
-    ]
-  },
-  {
-    large: 'https://static.wixstatic.com/media/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png',
-      'https://static.wixstatic.com/media/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg'
-    ],
-    
-  },
-    {
-    large: 'https://static.wixstatic.com/media/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png',
-      'https://static.wixstatic.com/media/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg'
-    ]
-  },
-    {
-    large: 'https://static.wixstatic.com/media/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png',
-    smalls: [
-      'https://static.wixstatic.com/media/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png',
-      'https://static.wixstatic.com/media/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg'
-    ]
-  }
-
+  { large: a1, smalls: [a2, a3] },
+  { large: a4, smalls: [a5, a6] },
+  { large: a7, smalls: [a8, a9] },
+  { large: a13, smalls: [a14, a15] },
+  { large: a16, smalls: [a17, a18] },
+  { large: a12, smalls: [a20, a21] },
+  { large: a22, smalls: [a23, a24] },
+  { large: a25, smalls: [a26, a27] },
+  { large: a28, smalls: [a29, a30] },
+  { large: a11, smalls: [a11, a33] },
+  { large: a34, smalls: [a35, a1] }, 
 ];
 
 const ImageGallery = () => {
@@ -85,7 +81,7 @@ const [likedImages, setLikedImages] = useState({});
           <div className="grid-group" key={index}>
         <div className="large-img">
   <img
-    style={{ maxHeight: "390px", width: "100%", objectFit: "cover" }}
+    style={{ maxHeight: "500px", width: "100%", objectFit: "cover" }}
     src={group.large}
     alt={`Large ${index + 1}`}
   />
@@ -116,13 +112,20 @@ const [likedImages, setLikedImages] = useState({});
 </div>
 
 
-     <div className="small-imgs">
+   <div className="small-imgs">
   {group.smalls.map((img, i) => {
     const key = `${index}-${i}`;
+    // Conditional width
+    const maxWidth = index === 0 ? "252px" : "600px"; 
+
     return (
       <div className="small-img" key={key}>
         <img
-          style={{ maxWidth: "400px", maxHeight: "190px", objectFit: "cover" }}
+          style={{
+            maxWidth: maxWidth,
+            maxHeight: "245px",
+            objectFit: "cover",
+          }}
           src={img}
           alt={`Small ${index + 1}-${i + 1}`}
         />
@@ -153,6 +156,7 @@ const [likedImages, setLikedImages] = useState({});
     );
   })}
 </div>
+
 
 
           </div>

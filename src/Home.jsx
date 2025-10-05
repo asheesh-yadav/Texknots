@@ -86,7 +86,7 @@ Always tuned into what’s next, they regularly present our latest collections�
         </div>
         <div className="design-limits-text">
           <h2>Design Without<br />Limits</h2>
-          <p>
+          <p style={{marginTop:"40px"}}>
             Our team is trained to step into your shoes, fostering a collaborative approach to
             collection development. With designers based in Europe, we stay ahead of trend forecasts and can assist you with:
           </p>
@@ -95,7 +95,7 @@ Always tuned into what’s next, they regularly present our latest collections�
             <li>Embroidery motifs</li>
             <li>Artisan techniques</li>
           </ul>
-          <p>Let your imagination run wild—we’ll handle the rest.</p>
+          <p >Let your imagination run wild—we’ll handle the rest.</p>
         </div>
               </div>
       </div>
