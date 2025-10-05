@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import  {  useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 const images = [
@@ -29,13 +31,9 @@ const images = [
     smalls: [
       'https://static.wixstatic.com/media/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_b45b9e7d6d354b90b4d2f85019468358~mv2.png',
       'https://static.wixstatic.com/media/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_9ac7adf36e294aea8dbc86718724ccd4~mv2.jpg'
-    ]
+    ],
+    
   },
-
-
-
-
-
     {
     large: 'https://static.wixstatic.com/media/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png/v1/fit/w_1260,h_350,q_90,enc_avif,quality_auto/9e0242_14df3dc7bf2a4980b89c0772cd3b4b91~mv2.png',
     smalls: [
@@ -55,33 +53,115 @@ const images = [
 
 const ImageGallery = () => {
   const scrollRef = useRef(null);
+  const [liked, setLiked] = useState(false);
+const [likedImages, setLikedImages] = useState({});
 
-  const scroll = (direction) => {
+  const heartStyle = {
+    cursor: "pointer",
+    fontSize: "16px",
+    color: liked ? "red" : "white",
+    marginLeft: "8px",
+    transition: "color 0.3s ease",
+  };
+
+  const handleScroll = (direction) => {
     const container = scrollRef.current;
+    if (!container) return;
     const scrollAmount = container.offsetWidth;
-    container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   return (
     <div className="creative-wrapper">
-      <button className="nav left" onClick={() => scroll('left')}>&#10094;</button>
+      <button className="navv left" onClick={() => handleScroll("left")}>
+        &#10094;
+      </button>
 
       <div className="grid-scroll" ref={scrollRef}>
         {images.map((group, index) => (
           <div className="grid-group" key={index}>
-            <div className="large-img">
-              <img style={{maxHeight:"390px"}} src={group.large} alt={`Large ${index + 1}`} />
-            </div>
-            <div className="small-imgs">
-              {group.smalls.map((img, i) => (
-                <img style={{maxWidth:"200px",maxHeight:"190px"}} src={img} key={i} alt={`Small ${index + 1}-${i + 1}`} />
-              ))}
-            </div>
+        <div className="large-img">
+  <img
+    style={{ maxHeight: "390px", width: "100%", objectFit: "cover" }}
+    src={group.large}
+    alt={`Large ${index + 1}`}
+  />
+  <div className="overlay">
+    <span
+      className="d-inline-flex align-items-center"
+      onClick={(e) => {
+        e.stopPropagation();
+        const key = `large-${index}`;
+        setLikedImages((prev) => ({
+          ...prev,
+          [key]: !prev[key],
+        }));
+      }}
+    >
+      <i
+        className={`bi ${likedImages[`large-${index}`] ? "bi-heart-fill" : "bi-heart"}`}
+        style={{
+          cursor: "pointer",
+          fontSize: "16px",
+          color: likedImages[`large-${index}`] ? "red" : "white",
+          marginLeft: "8px",
+          transition: "color 0.3s ease",
+        }}
+      ></i>
+    </span>
+  </div>
+</div>
+
+
+     <div className="small-imgs">
+  {group.smalls.map((img, i) => {
+    const key = `${index}-${i}`;
+    return (
+      <div className="small-img" key={key}>
+        <img
+          style={{ maxWidth: "200px", maxHeight: "190px", objectFit: "cover" }}
+          src={img}
+          alt={`Small ${index + 1}-${i + 1}`}
+        />
+        <div className="overlay">
+          <span
+            className="d-inline-flex align-items-center"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLikedImages((prev) => ({
+                ...prev,
+                [key]: !prev[key],
+              }));
+            }}
+          >
+            <i
+              className={`bi ${likedImages[key] ? "bi-heart-fill" : "bi-heart"}`}
+              style={{
+                cursor: "pointer",
+                fontSize: "16px",
+                color: likedImages[key] ? "red" : "white",
+                marginLeft: "8px",
+                transition: "color 0.3s ease",
+              }}
+            ></i>
+          </span>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+
           </div>
         ))}
       </div>
 
-      <button className="nav right" onClick={() => scroll('right')}>&#10095;</button>
+      <button className="navv right" onClick={() => handleScroll("right")}>
+        &#10095;
+      </button>
     </div>
   );
 };

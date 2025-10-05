@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+      /* margin-top: 110px; */
 }
 
 .viewer-image img {
@@ -44,7 +45,7 @@
   top: 20px;
   font-size: 20px;
   display: flex;
-  gap: 15px;
+  gap: 40px;
   z-index: 10;
 }
 .viewer-icons:hover{
