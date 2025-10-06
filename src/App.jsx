@@ -6,7 +6,8 @@ import Contact from './Contact';
 import Header from './Header';
 import Footer from './Footer';
 import View1 from './View1';
-import GallaryView from './GallaryView';
+import GallaryLarge from './GallaryLarge';
+import GallarySmall from './GallarySmall';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -25,7 +26,8 @@ const AppLayout = () => {
         <Route path='/' element={<Home />} />
         <Route path='/view/:id' element={<View />} />
         <Route path='/view1/:id' element={<View1 />} />
-        <Route path='/image/:id' element={<GallaryView />} />
+        <Route path='/image/large/:id' element={<GallaryLarge />} />
+           <Route path='/image/small/:id' element={<GallarySmall />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
 

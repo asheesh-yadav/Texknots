@@ -784,6 +784,10 @@ width: 632px;
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
+    pointer-events: none; 
+}
+.overlay span {
+  pointer-events: auto; 
 }
 
 .large-img:hover .overlay {

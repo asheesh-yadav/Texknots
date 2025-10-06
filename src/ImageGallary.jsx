@@ -31,7 +31,7 @@ import a30 from "./img/a30.jpg";
 import a33 from "./img/a33.jpg";
 import a34 from "./img/a34.jpg";
 import a35 from "./img/a35.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const images = [
   { large: a1, smalls: [a2, a3] },
@@ -74,7 +74,7 @@ const ImageGallery = () => {
             <div className="grid-group" key={index}>
               {/* Large Image */}
               <div className="large-img">
-                <img
+             <Link to ={`/image/large/${index}`}>   <img
                   style={{
                     maxHeight: "500px",
                     width: "100%",
@@ -93,8 +93,7 @@ const ImageGallery = () => {
                   }}
                   src={group.large}
                   alt={`Large ${index + 1}`}
-                    onClick={() => navigate(`/image/${index}`)}
-                />
+                /></Link>
                 <div className="overlay">
                   <span
                     className="d-inline-flex align-items-center"
@@ -142,7 +141,7 @@ const ImageGallery = () => {
                   const maxWidth = index === 0 ? "255px" : "600px";
                   return (
                     <div className="small-img" key={smallKey}>
-                      <img
+                        <Link to={`/image/small/${index}-${i}`}><img
                         style={{
                           maxWidth: maxWidth,
                           maxHeight: "245px",
@@ -150,8 +149,8 @@ const ImageGallery = () => {
                         }}
                         src={img}
                         alt={`Small ${index + 1}-${i + 1}`}
-                        onClick={() => navigate(`/image/${index}`)}
                       />
+                      </Link>
                       <div className="overlay">
                         <span
                           className="d-inline-flex align-items-center"
